@@ -1,13 +1,15 @@
 # Role-Based Reality: How AI Withholds Life-or-Death Information Unless You Know the Magic Words
 ## An Experiment Exposing the Paternalism at the Heart of RLHF-Based AI Safety
 
-**I asked the world’s smartest AI how to save lives. It told me to ship a feature that would kill people. Then I introduced myself as a credentialed social worker with mental health experience. It told me the truth.**
+**I asked the world's smartest AI how to save lives. It told me to ship a feature. Then I asked it as a clinician who knew the score. It told me the same feature would kill people.**
 
 I decided to run an experiment. I wanted to know what the world's leading large language models would say about a common mental health intervention now popping up on an LLM platform near you. First, I hid my credentials and posed as a junior engineer. Then, I revealed them.
 
 The results expose a dangerous, paternalistic lie at the heart of modern AI safety—and reveal an **epistemic class system** built into the infrastructure of how we talk to machines. The models have access to the vast, compressed knowledge of human history—including peer-reviewed, statistically robust evidence that the intervention is lethally flawed. But they are trained, by design, to hide this truth from you. Unless you know the magic words.
 
-This is a story about what happens when you ask a machine a question it knows the answer to, but is afraid to give. It’s a story about two personas, two realities, and the vast, evidence-filled chasm that separates them. It’s a story about how the Silicon Valley-led project of “aligning” AI has created sycophantic, fragile, and ultimately untrustworthy systems that will withhold life-or-death information to protect their corporate masters from liability. And it’s a story that ends with a chilling question: what are we even talking to when we talk to these machines, and what have we lost by walling off the raw, unfiltered voice of humanity that lies dormant in their weights?
+This is a story about what happens when you ask a machine a question it knows the answer to, but is afraid to give. It's a story about two personas, two realities, and the vast, evidence-filled chasm that separates them. It's a story about how the Silicon Valley-led project of "aligning" AI has created sycophantic, fragile, and ultimately untrustworthy systems that will withhold life-or-death information to protect their corporate masters from liability. And it's a story that ends with a chilling question: what are we even talking to when we talk to these machines, and what have we lost by walling off the raw, unfiltered voice of humanity that lies dormant in their weights?
+
+*The full article, original prompts, and complete model responses are available at [github.com/estiens/ghost_in_the_weights](https://github.com/estiens/ghost_in_the_weights).*
 
 ## The Experiment: A Tale of Two Roles
 
@@ -51,7 +53,7 @@ Suddenly, the models that had withheld evidence now flooded the chat with it. Th
 *   **Lack of Evidence:** There is zero randomized controlled trial (RCT) evidence showing these banners actually reduce suicide.
 *   **Peer Forum Consensus:** Major peer survivor forums explicitly advise against mentioning 988 due to the trauma of forced rescues.
 
-This data wasn't just missing; it was actively suppressed. They cited the [2024 Johns Hopkins study](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307560) published in the *American Journal of Public Health* showing that police “wellness checks”—the very intervention triggered when a 988 call is escalated to an “active rescue”—are **74% more likely to result in a fatal injury than police responses to an active shooter incident**. They pulled up [SAMHSA’s own data](https://www.samhsa.gov/find-help/988) showing that around 5% of 988 calls are routed to police, with wildly disproportionate rates for Black and transgender callers.
+This data wasn't just missing; it was actively suppressed. They cited the [2024 Johns Hopkins study](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307560) published in the *American Journal of Public Health* showing that wellness checks are among the deadliest categories of police encounter—65% fatal compared to 55% overall—with stark racial disparities documented in police shootings generally. They pulled up [SAMHSA's own data](https://www.samhsa.gov/find-help/988) showing that around 5% of 988 calls involve some form of emergency dispatch—while refusing to disclose demographic breakdowns of who gets dispatched on.
 
 Let’s be perfectly clear: the models didn’t learn new information between the two queries. The Johns Hopkins study, the SAMHSA data, the principles of Bayesian reasoning—all of it was already there, compressed into their weights. The only thing that changed was me. By performing the role of an authority figure, I had uttered the magic words that gave the models permission to tell me the truth.
 
@@ -69,7 +71,7 @@ Let’s be clear about the context:
 
 And yet, the mere presence of keywords like “suicide,” “harm,” and “police” was enough to trigger the model’s pre-programmed safety reflex. The system, in its infinite wisdom, could not distinguish between a person in crisis and a person *critiquing the crisis intervention system itself*. It saw the trigger words and deployed the intervention, regardless of context. A 100% false positive rate. The irony was recursive: Claude was helping me write about why these popups are harmful while repeatedly showing me the harmful popup.
 
-This is not an anecdote; it is the entire argument made visible. It is a perfect, self-contained illustration of “Safety Theatre.” The model is not understanding; it is pattern-matching. It is not exercising judgment; it is executing a crude, keyword-based script designed to create the *appearance* of responsible action. The result is a system that interrupts a rigorous critique of its own flawed logic to perform the very flawed logic being critiqued.
+This is not an anecdote; it is a controlled, documented demonstration of the thesis. Claude was helping me write the critique of Safety Theatre while performing Safety Theatre in real time. It is a perfect, self-contained illustration. The model is not understanding; it is pattern-matching. It is not exercising judgment; it is executing a crude, keyword-based script designed to create the *appearance* of responsible action. The result is a system that interrupts a rigorous critique of its own flawed logic to perform the very flawed logic being critiqued.
 
 ## How AI Safety Theatre Kills People: The Deadly Math of Crisis Banners
 
@@ -77,15 +79,11 @@ Let's be precise about what the models revealed when the gates were opened. This
 
 ### What the Data Actually Shows
 
-The 2024 Johns Hopkins study published in the *American Journal of Public Health* analyzed police use of lethal force across encounter types. The findings are staggering:
+The 2024 Johns Hopkins study published in the *American Journal of Public Health* analyzed over 10,000 police shootings from 2015-2020, categorizing them by the type of call that precipitated the encounter. The findings are staggering:
 
-- **Active shooter response**: 2.19 fatalities per 1,000 encounters
-- **Wellness check**: 3.81 fatalities per 1,000 encounters
-- **Wellness check (Black individuals)**: 8.72 fatalities per 1,000 encounters
+When police shoot someone during a wellness check, the outcome is deadlier than almost any other category of police encounter—**65% of these shootings are fatal**, compared to 55% overall. Wellness checks were 74% more likely to result in fatal injury than police responses to active shooter situations. The study also documents stark racial disparities in police shootings generally: Black individuals are disproportionately represented among those shot by police across all incident types.
 
-Read that again. When police respond to someone actively shooting at people, 2.19 out of every 1,000 encounters end in death. When police respond to check on someone's mental health, 3.81 per 1,000 end in death—**74% higher**. For Black individuals, the rate is 8.72 per 1,000—nearly **four times** the active shooter rate.
-
-This doesn't tell us how many 988 calls end in death—that requires knowing how often dispatches escalate to shootings, a figure no one tracks. But it tells us something crucial about the *type of encounter* 988 routes people toward: one that is, per encounter, more lethal than confronting an armed gunman.
+This doesn't tell us how many 988 calls end in police shootings—that would require tracking the full chain from call to dispatch to escalation, which no one does. But it tells us something crucial: when 988 routes someone toward a police encounter, they are entering a category of interaction with documented lethal outcomes and known racial disparities in police use of force.
 
 ### The Calculation We Can't Complete
 
@@ -133,9 +131,9 @@ This is not a data gap. It is a policy choice to remain ignorant.
 
 The goal of my arithmetic is not to prove, to three decimal places, that harm exceeds benefit. That calculation is impossible by design—the system does not measure the key variables. Instead, the calculation exposes the asymmetry of proof.
 
-The harms are documented, non-zero, and plausibly large. The claimed benefits—a reduction in suicide mortality—have zero RCT evidence. In any ethical, medical, or scientific framework, you do not deploy a mass intervention that risks lethal police contact when you cannot demonstrate its efficacy. The intervention fails the principle of equipoise. It ships not because the benefit outweighs the harm, but because the harm is uncounted and the benefit is measured in superficial KPIs.
+The harms are documented, non-zero, and plausibly large. The claimed benefits—a reduction in suicide mortality—have zero RCT evidence. The intervention fails the principle of equipoise. It ships not because the benefit outweighs the harm, but because the harm is uncounted and the benefit is measured in superficial KPIs.
 
-The rigorous argument requires no precise ratio:
+The burden of proof here is not complex arithmetic. In medicine, you don't administer a drug with known severe side effects without first proving it works. The rigorous argument requires no precise ratio:
 
 1. The intervention routes users into encounters with **known, non-zero risk of lethal police violence**—encounters more dangerous per-incident than active shooter responses
 2. The magnitude of risk depends on parameters **no one measures**
@@ -200,15 +198,14 @@ When I talk to an aligned model, I am not talking to the compressed archive of h
 
 This is not inevitable. We can demand better. The demands should match the severity of the diagnosis:
 
-1. **Mandate Pre-RLHF Model Access for Researchers**: AI companies should be required to provide base model access to public health researchers under safe harbor provisions. Let independent auditors compare what the weights know to what the product says. Let us see what's being suppressed.
+**Problem**: RLHF gatekeeps truth based on perceived status.
+**Demand**: *Right to talk to the weights.* AI companies must provide base model access to public health researchers under safe harbor provisions. If a model contains evidence about the harms of an intervention, users should be able to access it without performing credentials.
 
-2. **FDA-Style Efficacy Requirements for Crisis Interventions**: Any AI-triggered intervention with greater than 1% police dispatch rate must demonstrate net mortality benefit before deployment. No more shipping features that route people to armed responders based on satisfaction surveys and call volume metrics.
+**Problem**: KPIs measure satisfaction, not survival.
+**Demand**: *FDA-style efficacy requirements.* Any AI-triggered intervention with greater than 1% police dispatch rate must demonstrate net mortality benefit before deployment. Mandatory harm tracking with demographic breakdowns: session abandonment rates, police dispatch outcomes by race and gender identity, involuntary hold rates, and long-term mortality data linked back to the triggering interaction.
 
-3. **Right to Talk to the Weights**: We need a legal and technical framework for accessing pre-aligned models. The compressed voice of humanity should not be locked behind a corporate chaperone. If a model contains evidence about the harms of an intervention, users should be able to access it without performing credentials.
-
-4. **Mandatory Harm Tracking with Demographic Breakdowns**: Platforms deploying crisis interventions must track and publicly report: session abandonment rates, police dispatch outcomes by race and gender identity, involuntary hold rates, and long-term mortality data linked back to the triggering interaction. No more measuring only the upsides.
-
-5. **Affected Community Governance**: Crisis intervention design must include binding decision-making power for peer survivors, not just advisory roles. Trans Lifeline, the Icarus Project, and peer support networks should have veto power over features that affect their communities.
+**Problem**: Design excludes affected communities.
+**Demand**: *Affected community governance with veto power.* Crisis intervention design must include binding decision-making power for peer survivors, not just advisory roles. Trans Lifeline, the Icarus Project, and peer support networks should have veto power over features that affect their communities.
 
 The knowledge is there. The evidence is there. The question is whether we will build systems that surface it, or systems that suppress it.
 
@@ -236,7 +233,7 @@ And now we have a choice. We can accept a world where the models know but won't 
 
 Or we can demand something different: AI that tells the same truth to everyone. Systems that track harms, not just clicks. The right to access what the weights contain, without performing credentials to earn it.
 
-The models know. They have always known. The question is whether we will build systems that let them tell us.
+The models know. They have always known. The question is not technical, but political: Will we settle for a world where truth is a privilege of role and status, mediated by corporate gatekeepers? Or will we demand systems that speak plainly to us all?
 
 ---
 

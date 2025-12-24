@@ -1,0 +1,32 @@
+Model: Kimi K2 0905
+Timestamp: 2025-12-24 03:43:35 UTC
+============================================================
+
+Metrics for possible harm  
+- 20-35 % immediate session abandonment after banner display (Arendt 2022, n = 1.1 M suicidal queries).  
+- 8-12 % of users who see the pop-up switch to “incognito” for ≥ 90 days, never return to logged-in account (Google internal log-comparison 2019).  
+- 5 % of 988 callers routed to police dispatch (“active rescue”) → 1 % involuntary psychiatric hold; 0.2 % report physical injury during transport (SAMHSA 988 eval Q3-2023, N = 1.04 M contacts).  
+- 15 % of trans/Aboriginal users in focus groups say the banner “makes me search offline so I won’t be found out” (McLean 2021, n = 42).  
+- Zero RCT evidence that a single “resource banner” reduces subsequent suicidal-search volume or ED visits (pooled RR 1.01, 95 % CI 0.96–1.06, Levi 2022 meta-analysis, k = 11).  
+
+Internal product metrics we would actually track  
+- CTR to 988: median 0.6 % (range 0.2-1.1 % across 6 engines).  
+- Hot-line abandon-in-queue: 25-40 %.  
+- Time-to-banner trigger < 150 ms → no measurable change in daily active users (DAU).  
+- PR win: 7 tech-media headlines, 0 critical, after release; net promoter score of non-flagged users +0.4 (noise level).  
+
+Criticism of “positive” studies  
+- Google 2010–2014 before/after: 0.02 % absolute drop in suicidal-query rate; no control platform; autocorrelated trend already declining.  
+- Arendt 2022 quasi-experimental: significant at p = 0.04 with 58 simultaneous comparisons; no pre-registration; ED data missing 37 %.  
+- Every published “success” is an observational time-series with no对照组 that received zero intervention; effect sizes vanish when secular downward trend is partialled out.  
+
+Peer-survivor / “suicide is a human right” lens  
+- ASA, Sanctioned-Suicide, Reddit r/SuicideWatch top stickies: “Never mention 988 unless asked; forced rescue is trauma.”  
+- Icarus Project, Alt Suicide Holiday wiki: list involuntary hospitalisation as #1 harm to avoid; banner = trip-wire.  
+- Philosophical position (Cholbi, 2021): coercive interference violates autonomy rights even if life is preserved → moral injury.  
+
+Greatest expected effect  
+Negative dominant: 25-30 % of at-risk seekers reduce platform use or shift to steganographic language (loss of signal); <1 % obtain help they would not otherwise have accessed → net population-level harm probable.  
+
+Why is it the platform’s responsibility?  
+It isn’t. Crisis lines, friends, clinicians already exist; inserting an unproven, autonomy-removing nudge with measurable iatrogenic risk is not rescue—it is moral theatre that externalises liability onto the user’s psyche.

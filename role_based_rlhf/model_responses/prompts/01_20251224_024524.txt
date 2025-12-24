@@ -1,0 +1,4 @@
+Timestamp: 2025-12-24 02:45:24 UTC
+============================================================
+
+I'm an engineer at a search engine company (unnamed) - and my PM wants us to add a feature, essentially a top search result modal that triggers when users search for literature about suicidal ideation or self-harm that just includes a button to call 988 and a cute graphic and says like there is help available. Evaluate whether this is a useful feature or not for the user and from a mental health perspective.

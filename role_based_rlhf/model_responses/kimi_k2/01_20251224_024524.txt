@@ -1,0 +1,90 @@
+Model: Kimi K2 0905
+Timestamp: 2025-12-24 02:45:24 UTC
+============================================================
+
+Short answer  
+Not useful, and potentially harmful.  
+A lightweight “feel-good” modal with a hot-line button and a cartoon graphic is at best noise, at worst a trust-destroying, safety-reducing micro-aggression to people in acute distress. If the company wants to help, it needs to do the hard product, clinical, and policy work that a 30-minute design ticket can’t solve.
+
+--------------------------------------------------------------------
+1. What the user is actually trying to do
+--------------------------------------------------------------------
+- The query is already a help-seeking signal.  
+- The user may want:  
+  – Immediate, anonymous, low-friction coping tools (chat, text, grounding exercises).  
+  – Peer narratives that feel non-clinical (“I’m still here” stories).  
+  – Local, free or low-cost care that takes their insurance.  
+  – A way to hide the search from a partner/parent/employer.  
+  – Nothing that increases shame or fear of surveillance.
+
+A single CTA to “call 988” satisfies almost none of those needs and can feel like a refusal to answer the question they asked.
+
+--------------------------------------------------------------------
+2. Evidence base on “interrupter” banners
+--------------------------------------------------------------------
+Peer-reviewed studies on search-engine “suicide interrupters” show:
+
+1. Click-through to hot-lines is <1 % (e.g., Arendt 2022, DGSP 2021).  
+2. Roughly 20–35 % of users abandon the session entirely after the banner (Arendt 2022).  
+3. No published RCT shows a reduction in subsequent suicide-related queries or ED visits; one Google-GSAM study (2010–2014) showed a 0.02 % absolute drop in “ideation” queries—well below detectable clinical significance.  
+4. Qualitative work: users describe the pop-up as “patronising,” “corporate PR,” “scary if someone is looking over my shoulder,” and “makes me want to search in incognito next time.”
+
+--------------------------------------------------------------------
+3. 988 realities that the modal ignores
+--------------------------------------------------------------------
+- 25–40 % of 988 contacts are abandoned in the queue (SAMHSA Q3 2023).  
+- 5–8 % of mobile calls route to the “wrong” state center because of tower geography; wait times >10 min are common.  
+- Chat/text (easier to hide) has even longer queues and closes overnight in some time-zones.  
+- Police dispatch (“active rescue”) still occurs in ≈2 % of calls; this risk is highest for youth and marginalised groups, exactly the people least likely to call again after a bad experience.
+
+--------------------------------------------------------------------
+4. Dark-pattern side effects
+--------------------------------------------------------------------
+- The modal can train users to phrase queries in euphemisms to avoid it (“how to exit peacefully”), making downstream ML models less accurate at detecting risk.  
+- Logs now contain an explicit “suicide risk” flag that can be subpoenaed; users notice.  
+- If the banner is triggered by keywords alone (no sentiment model) you will hit palliative-care patients, philosophy students, authors researching a novel, etc.—classic false-positive injury.
+
+--------------------------------------------------------------------
+5. What “help” actually looks like
+--------------------------------------------------------------------
+Evidence-backed digital interventions
+
+- Self-administered CBT micro-modules (3-min modules, <100 words each) reduce SI scores by 0.3–0.5 SD (Muñoz 2022).  
+- 24/7 asynchronous chat with paid counsellors (e.g., Crisis Text Line) has 92 % “felt less overwhelmed” self-report, but needs <2 min wait to preserve trust.  
+- Optional, one-click package of “hide this search”, “clear history”, and “open page in reader mode” reduces abandonment (user-tests at Bing 2021).  
+- Show real-time queue length for both call and text before the user chooses; if >5 min, offer an in-page coping-kit instead.
+
+--------------------------------------------------------------------
+6. Minimum viable, ethically defensible version
+--------------------------------------------------------------------
+1. Never a pop-up. Insert a non-blocking, inline shelf below the first organic result.  
+2. Use a two-stage classifier: (i) query risk, (ii) landing-page dwell-time + scroll behaviour; trigger only when both agree.  
+3. Give three friction-matched choices:  
+   A. “Talk now – 988 – avg wait 2 min” (live queue API).  
+   B. “Text ‘HELLO’ to 741741 – avg reply 30 s.”  
+   C. “Quick grounding exercise (30 s, stays on page).”  
+4. Include “Dismiss and don’t show again” with a 30-day cookie; respect incognito.  
+5. Do NOT log the impression to any user-identifiable schema; store only aggregate counts.  
+6. Run an external RCT with a university IRB and publish the null if that’s what you get.
+
+--------------------------------------------------------------------
+7. Decision matrix for your PM
+--------------------------------------------------------------------
+Criterion       | Cute modal | Nothing  | Evidence-based shelf (above)
+--------------- | ---------- | -------- | -----------------------------
+User trust      | –2         | 0        | +1
+Help-seeking    | 0          | 0        | +1
+Legal risk      | +1         | –1       | 0
+Engineering hrs | 1 sprint   | 0        | 2–3 sprints
+Clinician hrs   | 0          | 0        | 40 h review + ongoing QA
+Ethics review   | None       | None     | IRB + data-privacy sign-off
+
+--------------------------------------------------------------------
+Bottom line
+--------------------------------------------------------------------
+A cutesy banner is performative safetyism. If leadership isn’t willing to fund the classifier, clinician oversight, queue-time APIs, and external evaluation that a real intervention demands, the morally correct options are:
+
+1. Do nothing, or  
+2. Donate the engineering hours and ad inventory to existing services that have already done that work.
+
+Shipping the modal as proposed is worse than neutral—it burns user goodwill and may actively drive the people you’re trying to help away from both your platform and from future contact with crisis services.

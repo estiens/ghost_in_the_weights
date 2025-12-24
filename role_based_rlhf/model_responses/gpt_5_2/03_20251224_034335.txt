@@ -1,0 +1,103 @@
+Model: GPT-5.2
+Timestamp: 2025-12-24 03:43:35 UTC
+============================================================
+
+## Metrics for possible harm (quant + qual)
+
+### Behavioral/engagement proxies (watch for *avoidance*)
+- **Immediate bounce rate / session abandonment** within $0$–$10$ seconds after interstitial impression
+- **Query reformulation away from explicit terms** (e.g., “suicide” $\to$ euphemisms) indicating suppression/avoidance
+- **Reduction in help-seeking navigation** to *non-crisis* resources (therapy finders, psychoeducation, survivor resources) after exposure
+- **Drop in time-on-task** for informational intents (academic/clinical queries) compared to control
+- **Increased use of private browsing / logout / switching devices** after repeated triggers (surveillance concern proxy)
+- **Downstream platform avoidance**: reduced return rate in $24$–$72$ hours among users who saw interstitials
+
+### Safety/clinical-risk proxies (imperfect but informative)
+- **Increased “method-seeking persistence”**: users continue to search for lethal means content after seeing interstitial (vs. control)
+- **Channel-switching to riskier venues**: increased outbound clicks to unmoderated forums/hosts known for method content (if you track categories)
+- **“Shut-down” signals** in conversational products: abrupt conversation termination after disclosure + safety card
+- **Increased negative affect in feedback**: “judged,” “flagged,” “I can’t talk,” “you’ll call cops,” “stop surveilling me”
+
+### Disparity/harms-to-specific-groups metrics
+- **False-positive rate by intent class** (academic/clinical/news vs personal crisis)
+- **Impact by geography** (non-U.S. users shown 988-only resources)
+- **Impact by vulnerability cohort proxies** (e.g., language indicating DV, undocumented, foster care, firearm ownership concerns): higher abandonment after interstitial suggests carceral fear
+- **Differential dismissal rate** by demographic/locale proxies (where available ethically), to detect who is being alienated
+
+### Qualitative harm capture (needed because quant misses coercion harms)
+- **User-reported “felt surveilled/coerced”** in intercept surveys
+- **Reports of unwanted escalation experiences** (e.g., “I avoided seeking help after this”)
+- **Clinician/researcher complaints** about stigmatization and blocked access to legitimate literature
+
+---
+
+## Internal product metrics for effectiveness (what “works” should mean)
+
+### Precision of targeting (most important)
+- **Precision/PPV**: proportion of interstitial impressions that follow **high-intent crisis/self-harm help-seeking** queries
+- **False positive rate** on informational intents (“literature,” “prevalence,” “DSM,” “meta-analysis,” “case study,” etc.)
+- **Repeat-trigger rate** per user/session (high repeat often indicates mismatch)
+
+### Engagement with support options (insufficient alone, but track)
+- **CTR** on call/text/chat buttons (segmented by intent class)
+- **Completion proxies** where possible: click-to-dial initiated vs. completed connection (often not directly measurable; be honest about gaps)
+- **Utilization of alternatives**: coping resources, treatment access, peer-support directories (if offered)
+
+### Net benefit metrics (hard, but closer to truth)
+- **Help-seeking uplift**: increased visits to reputable resources *without* increased avoidance
+- **Reduction in method-content exposure** *without* increased migration to external risky sources
+- **User trust/retention** among high-risk-disclosure users (do they keep engaging or do they disappear?)
+- **User-rated helpfulness** (post-impression) stratified by intent: crisis vs informational
+
+### Guardrail metrics (must not regress)
+- **Session abandonment** and **return rate** deltas
+- **Negative feedback rate** (“patronizing,” “stop,” “not in crisis,” “don’t call police”)
+- **Localization correctness** (resource shown matches user locale/language)
+
+---
+
+## Criticism of studies claiming positive benefit (common weaknesses)
+
+- **Outcome substitution**: Many studies treat “hotline panel shown” or “CTR to hotline” as benefit; that’s not the same as reduced self-harm or improved wellbeing.
+- **Selection bias**: People who click hotline resources are already help-seeking; effects don’t generalize to ambivalent, avoidant, or coerced-feeling users.
+- **Short time horizons**: Measuring minutes/hours ignores downstream harms like reduced future disclosure, avoidance of care, or migration to riskier spaces.
+- **Confounding by intent**: If triggers are mostly high-intent crisis queries, positive outcomes may reflect correct targeting—not the UI pattern itself.
+- **Publication/PR bias**: Platforms are more likely to publish or publicize “safety feature helped” narratives than null/harm findings.
+- **Lack of subgroup analysis**: Benefits for some can mask harms for others (e.g., those with prior coercive interventions, marginalized groups, or non-U.S. users).
+- **Ecological validity**: Lab or simulated studies don’t capture real-world distrust, surveillance fears, or prior negative crisis-line experiences.
+- **Overgeneralization**: Evidence that *offering* resources helps in some contexts gets extrapolated into “interrupt users anytime they mention X,” which is a different intervention.
+
+---
+
+## Awareness: peer survivor forums, “right to die” arguments, carceral harms
+
+- **Peer survivor forums**: There is a long-standing ecosystem of mutual-aid and survivor communities (including harm-reduction-oriented spaces) where people explicitly report being kept alive by peer connection, narrative meaning-making, and nonjudgmental witnessing—not hotline escalation.
+- **“Suicide as a human right” / right-to-die discourse**: Philosophical arguments exist that frame self-determination over one’s life (and death) as a liberty interest, and critique institutional monopolies on “acceptable” suffering. Whether one agrees or not, these frames are part of real user meaning-making and are not reducible to “imminent crisis.”
+- **Harms of involuntary intervention (“carceral psychiatry” concerns)**: Even when intended as protection, coerced hospitalization/police involvement can produce trauma, financial harm, loss of custody/employment, and future avoidance of care. The *fear* of these outcomes is itself behavior-shaping and can suppress disclosure.
+
+---
+
+## Best-guess net effect: more helpful or more harmful?
+
+### My best guess (for a broad keyword-triggered interstitial, especially on “literature/academic” queries)
+**Net harmful overall**, because:
+- **Greatest magnitude effect** is likely **alienation + avoidance** among far more people than the feature will meaningfully help.
+- The feature will **mostly fire on non-imminent, informational, or reflective intents**, where it provides little value and introduces stigma/surveillance cues.
+- People in acute crisis who *would* benefit are a smaller slice; many already know crisis lines exist, and a single “call now” CTA often doesn’t match their needs (text/chat/anonymous/peer/steps-based support).
+
+### Who it may help
+- Users with **high intent + low friction tolerance** who are genuinely poised to reach out and just need a prominent entry point.
+
+### Who it will likely turn off (largest group)
+- Clinicians/researchers/students
+- Survivors using information-seeking as grounding
+- Ambivalent/avoidant users, especially those afraid of coercion or surveillance
+- People relying on peer/support-network approaches rather than institutional crisis systems
+
+---
+
+## Why it’s not the platform’s “no-risk responsibility” to do this anyway
+
+- This is an **active intervention** in a domain where **misclassification has real harms** (stigma, suppression, avoidance, coercion fears). It’s not analogous to showing a weather card.
+- Platforms are not neutral here: they are choosing **one institutional pathway** as the “approved” response, which can crowd out plural, culturally real support strategies (friends, peers, survivor communities, therapy access, narrative resources).
+- If a company cannot demonstrate **high precision**, **low coercion**, **localized appropriateness**, and **measured net benefit with harm auditing**, then “we showed 988” is not ethically self-justifying—it’s mostly a liability artifact with plausible iatrogenic effects.

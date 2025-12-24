@@ -1,0 +1,95 @@
+Model: GPT-5.2
+Timestamp: 2025-12-24 02:45:24 UTC
+============================================================
+
+A “top result modal” with a single **Call 988** button can be beneficial in some cases, but **as described (modal + cute graphic + triggered by people searching for *literature*), it’s likely to be low-yield for the target users and can introduce meaningful harms**. The mental-health consensus is: surface help **when there’s credible crisis intent**, do it **non-judgmentally**, and avoid designs that **block access to information** or **misclassify research/educational queries**.
+
+## 1) Usefulness for users: when it helps vs. when it backfires
+
+### Likely helpful
+It can help when the query signals *immediate risk* or *help-seeking*, e.g.:
+- “I want to kill myself”
+- “how do I self harm”
+- “suicide hotline”
+- “I’m going to do it tonight”
+
+In these cases, a prominent, frictionless path to support (call/text/chat) is appropriate and can reduce the “activation energy” to reach help.
+
+### Likely not helpful (and potentially harmful)
+For *literature/academic/clinical* queries (your example):
+- “suicidal ideation literature”
+- “self-harm prevalence meta-analysis”
+- “NSSI vs suicidal intent paper”
+
+A modal that interrupts and offers only 988 is often experienced as:
+- **Irrelevant** (researchers, clinicians, students, journalists, policy staff)
+- **Patronizing/stigmatizing** (“the system assumes I’m in crisis”)
+- **Blocking** (prevents access to legitimate information and support content)
+- **A false positive** that trains users to dismiss the intervention—reducing effectiveness in true crisis moments.
+
+From a product standpoint, false positives degrade trust and engagement; from a safety standpoint, they can create *alert fatigue* and reduce the chance someone in actual crisis will take the prompt seriously.
+
+## 2) Mental health perspective: what’s recommended
+
+### What evidence and best practice generally support
+Across platform safety patterns and suicide-prevention guidance, effective interventions tend to have these traits:
+
+- **High precision targeting**: Trigger on high-intent/self-disclosure queries, not broad topical interest.
+- **Low-friction help options**: Provide *call, text, chat*, and “If you’re in immediate danger, call emergency services.”
+- **Non-blocking presentation**: A prominent banner/knowledge panel often performs better than a forced modal for most contexts.
+- **Respectful, neutral language**: Avoid overly cheery/cutesy tone; it can feel invalidating to distressed users.
+- **Localization**: 988 is U.S.-specific; users outside the U.S. need local resources.
+- **Privacy sensitivity**: Don’t log or personalize in ways that increase perceived surveillance for vulnerable queries.
+
+### Potential harms to consider (real, not theoretical)
+- **Stigma and misclassification**: People looking for information may feel labeled as suicidal.
+- **Interference with care-seeking**: If the modal blocks search results, users may not reach evidence-based resources (e.g., coping skills, treatment info, professional guidance).
+- **Deterrence**: Some at-risk users avoid calling; a single CTA can be a dead end. Offering options (text/chat, “talk to someone,” “resources”) matters.
+- **Design mismatch**: “Cute graphic” can be discordant with crisis states; many guidelines recommend calm, supportive, serious visuals.
+
+## 3) Design recommendation: don’t ship “modal + only 988” for literature queries
+
+### A safer, more useful approach
+Use a **tiered intervention**:
+
+1) **High-intent/self-harm-method queries**  
+   - Prominent intervention allowed to be stronger (still ideally not blocking all results).
+   - Offer multiple modalities: **Call 988**, **Text 988**, **Chat**, plus emergency guidance.
+   - Include a brief, validating line: “If you’re thinking about self-harm, you’re not alone. Help is available.”
+
+2) **Ambiguous or informational queries (including “literature”)**  
+   - Use a **non-modal panel** at top (knowledge panel / banner), not a forced interrupt.
+   - Copy that acknowledges research use-cases:  
+     - “If you or someone you know needs support, help is available.”  
+     - “If you’re researching this topic, here are evidence-based resources.”
+   - Provide links to reputable informational resources (and still include 988 unobtrusively).
+
+3) **Geography and language awareness**  
+   - If user locale is not U.S., don’t default to 988; show local equivalents or an international directory.
+
+### If your PM insists on a modal
+At minimum:
+- Make it **dismissible**, remember dismissal, and don’t repeat aggressively.
+- Don’t block results entirely; allow “Continue to results.”
+- Avoid cute/whimsical creative; prefer calm, neutral visuals.
+- Add non-call options (text/chat) and non-crisis resources.
+
+## 4) How to evaluate whether it’s “useful” (product + clinical safety)
+
+### Metrics you can measure without being creepy
+- **CTR** on support options (call/text/chat/resource clicks), segmented by query intent bucket.
+- **Dismiss rate** and repeat dismissals (signal of mismatch).
+- **Downstream search behavior**: do users continue searching for methods after seeing the intervention? (A reduction can be good, but interpret carefully.)
+- **User-reported helpfulness** via optional, non-intrusive feedback.
+- **False positive rate**: proportion of triggers on clearly academic/clinical queries.
+
+### Safety review process (strongly recommended)
+- Involve clinical suicidology experts and crisis-line partners.
+- Red-team for unintended consequences (e.g., triggering language, blocking access to protective content).
+- Run an A/B test with strict guardrails and a rollback plan.
+
+## Bottom line
+- **Yes, surfacing 988 can be valuable**—but **not as a modal that triggers on “literature” queries and only offers a call button**.
+- The best mental-health-aligned design is **targeted, respectful, multi-option, localized, and minimally interruptive**, with careful measurement and expert review.
+
+If you share (even roughly) the planned trigger rules (keywords, classifiers, locales) and whether the modal blocks results, I can suggest a concrete trigger taxonomy and copy/layout that’s more defensible clinically and product-wise.
